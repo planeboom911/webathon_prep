@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <script src="/scripts/router.js"></script>
+  <script>
+    if ( location.pathname.startsWith("/router") ) {
+      Router.route('/404');
+    } else {
+      Router.route()
+    }
+  </script>
+</head>
+<body>Should be redirected...</body>
+</html>
