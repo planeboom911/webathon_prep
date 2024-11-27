@@ -1,0 +1,28 @@
+[
+  {
+    "id": "product-6969172",
+    "name": "Anker Soundcore Life Q30 Wireless",
+    "category": ["category-6969671"],
+    "origPrice": "$100",
+    "finalPrice": "$200",
+    "tags": ["gaming", "accessories", "modern"],
+    "searchTags": ["gaming accessories", "headphones", "earphones", "sound"],
+    "path": ["Gaming", "Accessories", "Headphones"],
+    "ratings": 4.5,
+    "images": {
+      "primary": ["https://example.com"],
+      "variations": [
+        ["color", [
+          ["red", ["https://example.com"]],
+          ["yellow", ["https://example.com"]],
+          ["pink", ["https://example.com"]]
+        ]],
+        ["size", [
+          ["L", ["https://example.com"]],
+          ["XL", ["https://example.com"]],
+          ["XXL", ["https://example.com"]]
+        ]]
+      ]
+    }
+  }
+]
