@@ -1,0 +1,37 @@
+
+html {
+  --col-primary: #444DFF;
+  --col-accent: #BCB8FF;
+  --col-secondary: #FFE100;
+  --col-text: #050316;
+  --col-bg: #FFFFFF;
+}
+
+.col {
+  color: var(--col-text);
+}
+
+.bg {
+  background-color: var(--col-bg);
+}
+
+.col.primary {
+  color: var(--col-primary);
+}
+.bg.primary {
+  background-color: var(--col-primary);
+}
+
+.col.accent {
+  color: var(--col-accent);
+}
+.bg.accent {
+  background-color: var(--col-accent);
+}
+
+.col.secondary {
+  color: var(--col-secondary);
+}
+.bg.secondary {
+  background-color: var(--col-secondary);
+}

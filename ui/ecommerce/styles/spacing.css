@@ -1,0 +1,10 @@
+
+body {
+  --space-cards: 20px;
+}
+
+@media screen and ( max-width: 440px ) {
+  body {
+    --space-cards: 10px;
+  }
+}
