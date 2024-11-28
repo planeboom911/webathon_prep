@@ -25,13 +25,13 @@ var Routes = {
   ping: {route: "/ping", path: "/pong.html"},
   notFound: {route: "/404", path: Route404},
   ecommerce: {route: /^\/e(-|)commerce/, path: "/ecommerce/", redirect: true},
-  product: {route: /^\/products\/\w+$/, path: "/products/", dynamicPath: x => x.match(/^\/products\/(\w+)$/)[1]}
+  product: {route: /^\/products\/\w+$/, path: "/products/", dynamicPath: x => x.match(/^\/products\/(\w+)$/)[1]},
+  search: {route: '/search', path: "/ecommerce/search/", redirect: true},
 }
 
 /* ========== Global Router Object ========== */
 
 var Router = {
-  // route: Router__redirect, // only when Go Live isn't supported...
   route: Router__route,
   redirect: Router__redirect,
   ping: 0,
@@ -43,60 +43,19 @@ var Router = {
 async function Router__route(routeObj) {
 
   let startTime = Date.now();
-  let routeLoc = routeObj
   let routeDelay = Router.delay
   let replacePath = '';
   let routeDynamicPath = '';
+  let routePath = routeObj;
 
   if ( typeof routeObj === "object" ) {
-    routeLoc = routeObj.route;
+    routePath = routeObj.route;
     routeDelay = routeObj.delay || routeDelay
     replacePath = routeObj.replacePath || ''
     routeDynamicPath = routeObj.dynamicPath || '';
   }
 
-  let loc = `${routeLoc || location.pathname}`;
-
-  let queryPos = loc.indexOf('?') + 1;
-  let hashPos = loc.indexOf('#') + 1;
-
-  // capture only upto '#' or '?' whichever comes first
-  let captureLast = queryPos && hashPos ? Math.min(queryPos, hashPos) : Math.max(queryPos, hashPos)
-  if ( captureLast )
-    loc = loc.substring(0, captureLast-1)
-
-  // get matching route if exists else Route404
-  let matchedRoute = Object.values(Routes).filter(({route}) => {
-    const isRegex = x => (x instanceof RegExp);
-
-    if ( typeof route === "function" )
-      return route(loc)
-    else if ( Array.isArray(route) )
-      return route.some(x => isRegex(x) ? x.test(loc): x === loc)
-    else if ( isRegex(route) )
-      return route.test(loc)
-    else
-      return route === loc
-
-  })[0];
-
-  matchedRoute = matchedRoute || {route: Route404};
-
-  routePath = matchedRoute.path
-
-  if ( typeof routePath === "function" ) {
-    routePath = routePath(loc)
-  }
-
-  routePath = routePath || Route404
-  replacePath = matchedRoute.replacePath || replacePath
-
-  if ( typeof replacePath === "function") {
-    replacePath = replacePath(loc)
-  }
-  
-  if (!replacePath && matchedRoute.redirect)
-    replacePath = routePath
+  let loc = routePath || location.pathname
 
   if ( replacePath )
     replacePath += loc.substring(routePath.length + 1); /* add leftover path */
@@ -143,6 +102,7 @@ async function Router__route(routeObj) {
     if ( replacePath ) {
       window.history.pushState({}, '', replacePath);
     }
+
   } catch(e) {
     Router__route(Route404);
   }
