@@ -4,6 +4,7 @@
 @import url(./spacing.css);
 @import url(./header.css);
 @import url(./productList.css);
+@import url(./categories.css);
 
 main {
   --padding-normal: 1.6rem 3.5rem;

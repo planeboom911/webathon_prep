@@ -10,12 +10,15 @@ html {
   --col-light-lightGrey: #F6F6F6;
   --col-grey: #636363;
   --col-green: #2AD06C;
+  --col-mediumGrey:#959595;
 }
 
 .col {
   color: var(--col-text);
 }
-
+.col.white{
+  color: var(--col-white);
+}
 .bg {
   background-color: var(--col-white);
 }
@@ -35,6 +38,9 @@ html {
 }
 
 .col.lightgrey {
+  color: var(--col-grey);
+}
+.col.mediumgrey {
   color: var(--col-grey);
 }
 .bg.grey {
