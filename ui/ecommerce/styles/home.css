@@ -2,3 +2,111 @@
 @import url(./reset.css);
 @import url(./tyography.css);
 @import url(./spacing.css);
+@import url(./header.css);
+
+main {
+  --padding-normal: 1.6rem 3.5rem;
+}
+
+.top.banner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 453px;
+  background-color: var(--col-text);
+  overflow: hidden;
+}
+
+.top.banner img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.top.banner .content {
+  padding-left: 4.9rem;
+  color: var(--col-white);
+}
+
+.top.banner p.title {
+  font-size: calc(var(--text-4xl) * 1.7);
+  font-weight: 600;
+  font-family: var(--font-family-primary);
+}
+
+.top.banner button.highlight {
+  padding: 1rem 1.2rem;
+  background: var(--col-primary);
+  font-size: var(--text-2xl);
+  color: inherit;
+  border-radius: 0.5rem;
+}
+
+.top.banner .slideDots {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  column-gap: 0.8rem;
+  bottom: 10px;
+  justify-content: center;
+}
+
+.top.banner .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--col-white);
+}
+
+.top.banner .dot.active {
+  background-color: var(--col-primary);
+}
+
+.productList {
+  padding: var(--padding-normal);
+}
+
+.productList .slider {
+  display: flex;
+  column-gap: 1.25rem;
+  overflow: hidden;
+}
+
+.productList .title {
+  font-size: var(--text-3xl);
+  font-weight: 600;
+  padding-bottom: 1rem;
+}
+
+.productList .product {
+  background: var(--col-xtraLightGrey);
+  display: grid;
+  padding: 1rem;
+  width: 310px;
+  height: 478px;
+  align-items: center;
+}
+
+.productList .product .top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.productList .product .image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.productList .product .name {
+  font-size: var(--text-lg);
+  padding-top: 1.6rem;
+  font-weight: 600;
+}
+
+.productList .product.companyName {
+  padding-top: 0px;
+}

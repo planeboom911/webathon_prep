@@ -4,7 +4,10 @@ html {
   --col-accent: #BCB8FF;
   --col-secondary: #FFE100;
   --col-text: #050316;
-  --col-bg: #FFFFFF;
+  --col-white: #FFFFFF;
+  --col-lightGrey: #F1F1F1;
+  --col-xtraLightGrey: #F6F6F6;
+  --col-grey: #636363;
 }
 
 .col {
@@ -12,7 +15,7 @@ html {
 }
 
 .bg {
-  background-color: var(--col-bg);
+  background-color: var(--col-white);
 }
 
 .col.primary {
@@ -27,6 +30,20 @@ html {
 }
 .bg.accent {
   background-color: var(--col-accent);
+}
+
+.col.lightgrey {
+  color: var(--col-grey);
+}
+.bg.grey {
+  background-color: var(--col-grey);
+}
+
+.col.lightGrey {
+  color: var(--col-lightGrey);
+}
+.bg.lightGrey {
+  background-color: var(--col-lightGrey);
 }
 
 .col.secondary {

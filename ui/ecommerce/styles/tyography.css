@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root {
-  --font-family-primary: "Iner", sans-serif;
+  --font-family-primary: "Inter", sans-serif;
   --font-family-secondary: "Inter", sans-serif;
   
   --text-4xl: clamp(1.802rem, 1.2522rem + 1.9996vw, 3.0518rem);
@@ -13,4 +13,52 @@
   --text-sm: clamp(0.8rem, 0.928rem + -0.1422vw, 0.8889rem);
   --text-xs: clamp(0.64rem, 0.8562rem + -0.2402vw, 0.7901rem);
   --text-2xs: clamp(0.512rem, 0.7861rem + -0.3045vw, 0.7023rem);
+
+}
+
+.font.primary {
+  font-family: var(--font-family-primary);
+  font-size: var(--text-base);
+}
+
+.font.secondary {
+  font-family: var(--font-family-secondary);
+  font-size: var(--text-base);
+}
+
+.text-4xl {
+  font-size: var(--text-4xl);
+}
+.text-3xl {
+  font-size: var(--text-3xl);
+  letter-spacing: calc(-0.04 * var(--text-3xl));
+}
+.text-2xl {
+  font-size: var(--text-2xl);
+}
+.text-xl {
+  font-size: var(--text-xl);
+}
+.text-lg {
+  font-size: var(--text-lg);
+}
+.text-base {
+  font-size: var(--text-base);
+}
+.text-sm {
+  font-size: var(--text-sm);
+}
+.text-xs {
+  font-size: var(--text-xs);
+}
+.text-2xs {
+  font-size: var(--text-2xs);
+}
+
+.semibold {
+  font-weight: 500;
+}
+
+@media screen and ( max-width: 440px ) {
+  
 }

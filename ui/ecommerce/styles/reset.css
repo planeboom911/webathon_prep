@@ -8,8 +8,14 @@
 button {
   outline: none;
   border: none;
+  cursor: pointer;
 }
 
 *:focus-visible {
   outline: 2px solid var(--col-text);
+}
+
+a,a:visited {
+  all: unset;
+  cursor: pointer;
 }
