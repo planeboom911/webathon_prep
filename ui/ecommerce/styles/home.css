@@ -3,6 +3,7 @@
 @import url(./tyography.css);
 @import url(./spacing.css);
 @import url(./header.css);
+@import url(./productList.css);
 
 main {
   --padding-normal: 1.6rem 3.5rem;
@@ -62,51 +63,4 @@ main {
 
 .top.banner .dot.active {
   background-color: var(--col-primary);
-}
-
-.productList {
-  padding: var(--padding-normal);
-}
-
-.productList .slider {
-  display: flex;
-  column-gap: 1.25rem;
-  overflow: hidden;
-}
-
-.productList .title {
-  font-size: var(--text-3xl);
-  font-weight: 600;
-  padding-bottom: 1rem;
-}
-
-.productList .product {
-  background: var(--col-xtraLightGrey);
-  display: grid;
-  padding: 1rem;
-  width: 310px;
-  height: 478px;
-  align-items: center;
-}
-
-.productList .product .top {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.productList .product .image {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.productList .product .name {
-  font-size: var(--text-lg);
-  padding-top: 1.6rem;
-  font-weight: 600;
-}
-
-.productList .product.companyName {
-  padding-top: 0px;
 }

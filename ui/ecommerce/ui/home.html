@@ -11,7 +11,7 @@
     <header>
       <h1 class="text-3xl semibold logo"><a href="#">LOGO</a></h1>
       <div class="input bg lightGrey">
-        <img src="../icons/search.svg" alt="" class="icon" width="18" height="18">
+        <img src="../icons/search.svg" alt="" class="icon" width="16" height="16">
         <input type="text" class="text-base" placeholder="search products...">
       </div>
       <nav>
@@ -39,7 +39,9 @@
           <div class="product">
             <div class="top">
               <p class="discount">-42%</p>
-              <img src="../icons/favorite.svg" alt="" class="icon">
+              <div class="img">
+                <img src="../icons/favorite.svg" alt="" class="icon">
+              </div>
             </div>
             <div class="image">
               <img src="../images/gamepad.png" alt="">
@@ -49,8 +51,23 @@
               <p class="companyName">razor</p>
               <p class="price">Rs. 3200</p>
               <div class="end">
-                <div class="rating"></div>
-                <p class="inStock"></p>
+                <div class="rating" style="--rating: 4.4;">
+                  <div class="filled">
+                    <img src="../icons/star_filled.svg" width="16" height="16" alt="">
+                    <img src="../icons/star_filled.svg" width="16" height="16" alt="">
+                    <img src="../icons/star_filled.svg" width="16" height="16" alt="">
+                    <img src="../icons/star_filled.svg" width="16" height="16" alt="">
+                    <img src="../icons/star_filled.svg" width="16" height="16" alt="">
+                  </div>
+                  <div class="empty">
+                    <img src="../icons/star_empty.svg" width="16" height="16" alt="">
+                    <img src="../icons/star_empty.svg" width="16" height="16" alt="">
+                    <img src="../icons/star_empty.svg" width="16" height="16" alt="">
+                    <img src="../icons/star_empty.svg" width="16" height="16" alt="">
+                    <img src="../icons/star_empty.svg" width="16" height="16" alt="">
+                  </div>
+                </div>
+                <p class="inStock">in stock</p>
               </div>
             </div>
           </div>
