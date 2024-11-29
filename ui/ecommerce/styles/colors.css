@@ -7,8 +7,9 @@ html {
   --col-white: #FFFFFF;
   --col-whitish: #FAFAFA;
   --col-lightGrey: #F1F1F1;
-  --col-xtraLightGrey: #F6F6F6;
+  --col-light-lightGrey: #F6F6F6;
   --col-grey: #636363;
+  --col-green: #2AD06C;
 }
 
 .col {

@@ -1,0 +1,7 @@
+
+
+.categories .title {
+  font-size: var(--text-3xl);
+  font-weight: 600;
+  padding-bottom: 1rem;
+}

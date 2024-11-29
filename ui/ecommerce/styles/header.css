@@ -43,9 +43,16 @@ header nav {
 
 header nav button {
   height: 3.25rem;
-  padding: 0 2.5rem;
+  padding: 0 1.25rem;
+  width: max-content;
   border-radius: 20rem;
   background-color: var(--col-primary);
   color: var(--col-white);
   font-size: var(--text-lg);
+}
+
+@media screen and ( max-width: 875px) {
+  header nav .icon {
+    display: none;
+  }
 }
