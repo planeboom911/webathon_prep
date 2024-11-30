@@ -1,0 +1,49 @@
+/* 
+  ====== Size.css ======
+  Contains various "fluid" sizes in variables and classes as per required.
+  To get fluid sizes, https://utopia.fyi
+
+  NOTE :
+    Create a VARIABLE IF :
+      - you need to apply the size in 'css'
+    
+    Create a CLASS IF :
+      - you need to apply the size in 'html'
+    
+    You can create both if the size is required both in 'html' & 'css'
+  
+  Variable format :
+    --<"size"/usecase>-[category?]-[usecase2?], where :
+      <"size"> --> literally "size"
+      <usecase> : A name for a particular use case. ( example : border radius, ... )
+      [category?] : optional, a name for a category ( example : mobile, home, ... )
+      [usecase2?] : optional, a second name for a sub-case or another particular use case ( header-x, header-y, ...)
+  
+  Class format :
+    .<"size"/usecase>-[category?]-[usecase2?] ==> [category?] & [usecase2?] are optional =>
+      applies "size"/usecase of --<"size"/usecase>-[category?]-[usecase2?]
+  
+*/
+
+html {
+
+  /* == Banner == */
+  --size-banner-x: 100%;
+  --size-banner-y: clamp(15.75rem, 10.9925rem + 17.3vw, 26.5625rem);
+  
+  /* == Category: border radius == */
+  --border-radius-circle: 50%;
+  --border-radius-round: 100rem;
+
+  /* == Category: padding == */
+  --padding-global: clamp(0.625rem, 0.35rem + 1vw, 1.25rem); /* 20px on desktop, 10px on mobile */
+
+  /* icons */
+  --icon-size: round(up, clamp(1.25rem, 0.865rem + 1.4vw, 2.125rem), 1px);
+
+}
+
+.icon, .icon img {
+  width: var(--icon-size);
+  height: var(--icon-size);
+}

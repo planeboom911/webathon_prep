@@ -75,3 +75,8 @@ main {
 .top.banner .dot.active {
   background-color: var(--col-primary);
 }
+
+.bestSelling .discount {
+  visibility: hidden;
+  pointer-events: none;
+}

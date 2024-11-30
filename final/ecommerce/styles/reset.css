@@ -1,0 +1,56 @@
+/* 
+  ====== Reset.css ======
+  Prepares a css reset for easy workflow.
+
+  Performs things like :
+    
+    For all things
+      > box-sizing: border-box;
+      > padding: 0; margin: 0;
+
+    button reset, anchor links reset, ...
+    and many other things...
+*/
+
+*, *::after, *::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+button, button:focus {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: inherit;
+  width: max-content;
+  padding: 0.5rem 1rem;
+  background-color: var(--col-grey-dark);
+  border-radius: 0.25rem;
+}
+
+input {
+  font-size: inherit;
+}
+
+button:focus-visible {
+  outline: 2px solid var(--col-primary-dark);
+}
+
+a, a:visited {
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  text-decoration: 1px dotted;
+  text-underline-offset: 4px;
+}
+
+input {
+  outline: none;
+  border: none;
+  border: 1px solid var(--col-primary-dark);
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+}
