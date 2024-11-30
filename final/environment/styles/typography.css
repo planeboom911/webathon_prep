@@ -1,0 +1,142 @@
+/* 
+  ====== Typography.css ======
+  Contains various font family, and "fluid" font size definitions in variables and classes.
+  To get fluid sizes, https://utopia.fyi
+
+  Variables format :
+    --font-<usecase> : for font families, where <usecase> is a unique use case name.
+
+    --text-[?usecase]-<size> : for text sizes, where =>
+      <size> can be :
+        - 4xl : largest text (h1)
+        - 3xl : larger text (h2)
+        - 2xl : large text (h3)
+        - xl : bigger text (h4)
+        - lg : big text
+
+        - base : base text
+        
+        - sm : small text
+        - xs : smaller text
+        - 2xs : smallest text
+      
+      [?usecase] is optional and can be used if required
+        Example : text-mobile-lg, text-desktop-sm, text-card-2xl, text-title-xl, etc...
+  
+  Classes format :
+    .font-<usecase>: change font family to --font-<usecase>
+
+    .text-[?usecase]-<size>: [?usecase] is optional
+      change text size to --text-[?usecase]-<size>
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+html {
+  /* font families */
+  --font-primary: "Inter", sans-serif;
+  --font-secondary: "Playfair Display", serif;
+  
+  /* font sizes */
+  --text-5xl: clamp(2.0273rem, 1.2408rem + 2.8599vw, 3.8147rem);
+  --text-4xl: clamp(1.802rem, 1.2522rem + 1.9996vw, 3.0518rem);
+  --text-3xl: clamp(1.6018rem, 1.2324rem + 1.3434vw, 2.4414rem);
+  --text-2xl: clamp(1.4238rem, 1.1909rem + 0.8469vw, 1.9531rem);
+  --text-xl: clamp(1.2656rem, 1.135rem + 0.475vw, 1.5625rem);
+  --text-lg: clamp(1.125rem, 1.07rem + 0.2vw, 1.25rem);
+  --text-base: clamp(1rem, 1rem + 0vw, 1rem);
+  --text-sm: clamp(0.8rem, 0.928rem + -0.1422vw, 0.8889rem);
+  --text-xs: clamp(0.64rem, 0.8562rem + -0.2402vw, 0.7901rem);
+  --text-2xs: clamp(0.512rem, 0.7861rem + -0.3045vw, 0.7023rem);
+  
+
+  /* font weights */
+  --weight-thin: 100;
+  --weight-extralight: 200;
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --weight-extrabold: 800;
+  --weight-black: 900;
+
+  /* custom usecase : banner */
+  --text-banner-5xl: clamp(4rem, 2.735rem + 4.6vw, 6.875rem);
+  --text-banner-lineHeight-5xl: clamp(4.0625rem, 2.825rem + 4.5vw, 6.875rem);
+}
+
+/* font families */
+.font-primary {
+  font-family: var(--font-primary);
+}
+.font-secondary {
+  font-family: var(--font-secondary);
+}
+
+/* font sizes */
+.text-5xl {
+  font-size: var(--text-5xl);
+}
+.text-4xl {
+  font-size: var(--text-4xl);
+}
+.text-3xl {
+  font-size: var(--text-3xl);
+}
+.text-2xl {
+  font-size: var(--text-2xl);
+}
+.text-xl {
+  font-size: var(--text-xl);
+}
+.text-lg {
+  font-size: var(--text-lg);
+}
+.text-base {
+  font-size: var(--text-base);
+}
+.text-sm {
+  font-size: var(--text-sm);
+}
+.text-xs {
+  font-size: var(--text-xs);
+}
+.text-2xs {
+  font-size: var(--text-2xs);
+}
+
+/* custom usecase : banner */
+.text-banner-5xl {
+  font-size: var(--text-banner-5xl);
+  line-height: var(--text-banner-lineHeight-5xl);
+}
+
+/* font weights */
+.weight-thin {
+  font-weight: var(--weight-thin);
+}
+.weight-extralight {
+  font-weight: var(--weight-extralight);
+}
+.weight-light {
+  font-weight: var(--weight-light);
+}
+.weight-regular {
+  font-weight: var(--weight-regular);
+}
+.weight-medium {
+  font-weight: var(--weight-medium);
+}
+.weight-semibold {
+  font-weight: var(--weight-semibold);
+}
+.weight-bold {
+  font-weight: var(--weight-bold);
+}
+.weight-extrabold {
+  font-weight: var(--weight-extrabold);
+}
+.weight-black {
+  font-weight: var(--weight-black);
+}

@@ -1,0 +1,20 @@
+/* 
+  ====== MediaQueries.css ======
+  Contains media queries classes to hide something in desktop / mobile via breakpoints.
+
+  Format :
+    .hide-in-desktop => hides that in desktop
+    .hide-in-mobile => hides that in mobile       
+*/
+
+@media screen and (min-width: 900px) {
+  .hide-in-desktop {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .hide-in-mobile {
+    display: none !important;
+  }
+}

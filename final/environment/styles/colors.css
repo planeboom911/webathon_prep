@@ -1,0 +1,146 @@
+/* 
+  ====== Colors.css ======
+  Contains various color definitions in the variables and classes.
+  
+  Variables format : --col-<color>-<lightness>
+  Where,
+    <color> can be
+      - primary, secondary, accent, white, blue, green, ...
+    <lightness> can be
+      - extraLight, light, normal, dark, extraDark
+
+  FOR CUSTOM COLORS
+    --col-<color>-<purpose>
+    [ Example : --col-grey-header, --col-green-success, --col-grey-gradient ]
+    [ Use ONLY IF :
+        1. Your color is not present in the list
+        2. Your color cannot be presented in the list
+          [ Resons might be, there is already that color, the color is just one-time ]
+    ]
+
+  Classses :
+    .col-<color>-<lightness>
+      changes text color to --col-<color>-<lightness>
+    
+    .bg-<color>-<lightness>
+      changes bg color to --col-<color>-<lightness>
+*/
+
+html {
+  /* primary */
+  --col-primary-extraLight: #FFFCF8;
+  --col-primary-light: #EBC088;
+  --col-primary-normal: #FFB552;
+  --col-primary-dark: #3D2605;
+
+  /* secondary */
+  --col-secondary-normal: #FFE100;
+
+  /* accent */
+  --col-accent: #BCB8FF;
+
+  /* white */
+  --col-white-normal: #FFFFFF;
+
+  /* grey */
+  --col-grey-extraLight: #FAFAFA;
+  --col-grey-light: #F6F6F6;
+  --col-grey-normal: #F1F1F1;
+  --col-grey-dark: #959595;
+  --col-grey-extraDark: #636363;
+  
+  /* green */
+  --col-green-normal: #2AD06C;
+}
+
+/* html.dark {
+  dark scheme colors to be added here :)
+} */
+
+/* primary */
+.col-primary-normal {
+  color: var(--col-primary-normal);
+}
+.bg-primary-normal {
+ background-color: var(--col-primary-normal);
+}
+
+.col-primary-dark {
+  color: var(--col-primary-dark);
+}
+.bg-primary-dark {
+ background-color: var(--col-primary-dark);
+}
+
+
+/* secondary */
+.col-secondary-normal {
+  color: var(--col-secondary-normal);
+}
+.bg-secondary-normal {
+ background-color: var(--col-secondary-normal);
+}
+
+
+/* accent */
+.col-accent {
+  color: var(--col-accent);
+}
+.bg-accent {
+ background-color: var(--col-accent);
+}
+
+
+/* white */
+.col-white-normal {
+  color: var(--col-white-normal);
+}
+.bg-white-normal {
+ background-color: var(--col-white-normal);
+}
+
+
+/* grey */
+.col-grey-extraLight {
+  color: var(--col-grey-extraLight);
+}
+.bg-grey-extraLight {
+ background-color: var(--col-grey-extraLight);
+}
+
+.col-grey-light {
+  color: var(--col-grey-light);
+}
+.bg-grey-light {
+ background-color: var(--col-grey-light);
+}
+
+.col-grey-normal {
+  color: var(--col-grey-normal);
+}
+.bg-grey-normal {
+ background-color: var(--col-grey-normal);
+}
+
+.col-grey-dark {
+  color: var(--col-grey-dark);
+}
+.bg-grey-dark {
+ background-color: var(--col-grey-dark);
+}
+
+.col-grey-extraDark {
+  color: var(--col-grey-extraDark);
+}
+.bg-grey-extraDark {
+ background-color: var(--col-grey-extraDark);
+}
+
+
+/* green */
+.col-green {
+  color: var(--col-green);
+}
+.bg-green {
+ background-color: var(--col-green);
+}

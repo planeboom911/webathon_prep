@@ -1,0 +1,129 @@
+/* 
+  ====== Header.css ======
+  Contains collection of styles to apply it in everything inside `header`
+    Navbar, buttons, logo, ...
+*/
+
+
+/* 
+  ====== Variables ======
+*/
+
+header {
+
+  /* Header properties */
+  --width: 100%;
+  
+  --padding-x: clamp(0.75rem, -0.9rem + 6vw, 4.5rem);
+  --padding-y: clamp(0.3125rem, 0.0375rem + 1vw, 0.9375rem);
+
+  --col-gap: 1rem;
+  
+  /* Searchbar */
+  --search-width: min(100%, 760px);
+  --search-height: clamp(1.75rem, 0.65rem + 4vw, 4.25rem);
+  --search-height-mobile: clamp(2.625rem, 1.91rem + 2.6vw, 4.25rem);
+
+  --search-icon: round(up, clamp(0.75rem, 0.585rem + 0.6vw, 1.125rem), 1px);
+
+  --search-padding: 0 1.5rem;
+  --mobile-search-padding: 0 0.75rem;
+  --search-input-padding: 0 0.1rem;
+
+  --search-input: 1rem 0;
+
+  /* Navbar and buttons */
+  --button-padding: clamp(0.5rem, 0.413rem + 0.4348vw, 0.75rem) clamp(1rem, 0.45rem + 2vw, 2.25rem);
+  --button-text-size: clamp(1rem, 0.89rem + 0.4vw, 1.25rem);
+}
+
+/* 
+  ====== Styles ======
+*/
+
+header {
+  background-color: var(--col-primary-extraLight);
+}
+
+/* header container */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: var(--width);
+  padding: var(--padding-y) var(--padding-x);
+  column-gap: var(--col-gap);
+
+}
+
+.header .logo {
+  font-size: var(--text-3xl);
+  font-weight: var(--weight-medium);
+  letter-spacing: calc(-0.04 * var(--text-3xl));
+}
+
+/* search */
+header .search {
+  display: flex;
+  align-items: center;
+
+  width: var(--search-width);
+  height: var(--search-height);
+
+  padding: var(--search-padding);
+  font-size: var(--text-xl);
+  column-gap: 0.5rem;
+
+  border: 1px solid var(--col-primary-light);
+
+  border-radius: var(--border-radius-round);
+
+  background-color: var(--col-white-normal);
+}
+
+header .searchIcon {
+  width: var(--search-icon);
+  height: var(--search-icon);
+}
+
+
+/* search input */
+.search input {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: var(--search-input-padding);
+  border: none;
+  background-color: inherit;
+}
+
+.header .search input::placeholder {
+  color: var(--col-grey-dark);
+}
+
+header .mobile {
+  padding: var(--mobile-search-padding);
+}
+
+.mobile .search {
+  --search-height: var(--search-height-mobile);
+  --search-width: 100%;
+  font-size: var(--text-lg);
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  column-gap: 0.75rem;
+}
+
+header nav button {
+  font-size: var(--button-text-size);
+  padding: var(--button-padding);
+  border-radius: var(--border-radius-round);
+  background-color: var(--col-primary-normal);
+  color: var(--col-primary-dark);
+  font-weight: var(--weight-semibold);
+  margin-left: 0.5rem;
+}

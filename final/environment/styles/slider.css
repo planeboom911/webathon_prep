@@ -1,0 +1,28 @@
+/* 
+  ====== Slider.css ======
+  Slider styles ...
+*/
+
+.slideWrapper {
+  position: relative;
+  width: 100vw;
+  height: clamp(18rem, 12.555rem + 19.8vw, 30.375rem);
+}
+
+.slider {
+  --col-gap: var(--padding-global);
+}
+
+.slider {
+  position: absolute;
+  max-width: 100%;
+  display: flex;
+  column-gap: var(--col-gap);
+  overflow-x: scroll;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.slider > div:last-child {
+  margin-right: 8%;
+}
