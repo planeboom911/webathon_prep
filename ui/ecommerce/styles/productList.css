@@ -6,7 +6,8 @@
 .productList .slider {
   display: flex;
   column-gap: 1.25rem;
-  overflow: hidden;
+  overflow-x: auto;
+   scrollbar-width: none; /*makes scroll batr hidden but not supported in all browser */
 }
 
 .productList .title {
@@ -113,4 +114,48 @@
   height: 1rem;
   background-color: var(--col-green);
   border-radius: 50%;
+}
+
+/* RESPONSIVE PRODUCT */
+@media (max-width:440px) {
+  .productList{
+    padding: var(--padding-normal-m);
+  }
+  .productList .product{
+    width: 186px;
+    height: 288px;
+  }
+  .productList .product .top{
+    padding-bottom:10px;
+  }
+  .productList .product .image img{
+  height: 105px;
+  }
+  .productList .product .name{
+    font-size: var(--text-sm);
+    font-weight: 500;
+  }
+  .productList .product .companyName{
+    font-size: var(--text-xs);
+    padding-bottom: 0.2rem;
+  }
+  .productList .product .top .discount{
+    padding: 0.3rem;
+    font-size: var(  --text-2xs);
+  }
+  .productList .product .top .img{
+ padding: 0rem;   
+  }
+  .productList .product .price{
+    font-size: var(--text-base);
+    padding-bottom: 0.2rem;
+
+  }
+  .productList .product .end{
+    display: flex;
+    flex-direction: column;
+  }
+  .productList .product .end .inStock{
+    font-size: var(--text-2xs);
+  }
 }

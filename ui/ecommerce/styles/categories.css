@@ -2,12 +2,14 @@
 .categories {
   padding: var(--padding-normal);
 }
+
 .viewMore {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
-  column-gap: 20px;
   width: 100%;
+  place-items: center;
 }
+
 
 .categories .title {
   font-family: var(--font-family-primary);
@@ -35,3 +37,22 @@
   font-weight: 500;
   font-family: var(--font-family-primary);
 }
+
+  /* RESPONSIVE  */
+
+ @media (max-width:700px) {
+  .categories{
+    padding: var(--padding-normal-m);
+  }
+    .categories .viewMore{
+        row-gap: 20px;
+        grid-template-columns:repeat(2,1fr); 
+    }
+} 
+
+/* 
+@media (max-width:440px){
+  .categories .viewMore{
+    grid-template-columns:repeat(2,1fr); 
+  }
+} */
