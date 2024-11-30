@@ -36,20 +36,32 @@
   border: 1px solid var(--col-grey-dark);
   border-radius: 0.25rem;
   cursor: pointer;
+  transition: var(--transition-normal);
 }
 
-.categories .block:hover {
+  /* ANIMATION IS UPDATED */
+/* .categories .block:hover {
   background-color: var(--col-grey-normal);
+} */
+
+.categories .block:hover { /*UPDATED ANIMATION*/
+  border: none;
+  background-color: var(--col-primary-normal);
+  color: var(--col-white-normal);  
+}
+.categories .block:hover img{
+filter: invert(100%) grayscale(100%);
 }
 
+/* 
 .categories .block.active {
   background-color: var(--col-primary-normal);
   color: var(--col-white-normal);
-}
-
+} */
+/* 
 .categories .block.active img {
   filter: invert(100%) grayscale(100%);
-}
+} */
 
 .categories .icon {
   height: 77.8px;

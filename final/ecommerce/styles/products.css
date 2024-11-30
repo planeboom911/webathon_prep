@@ -37,12 +37,14 @@
   padding: var(--padding);
   border-radius: 0.5rem;
   cursor: pointer;
+  transition:var(--transition-normal);
   border: 1px solid transparent;
 }
 
+  /* ON PRODUCT HOVER */
 .product:hover {
   background-color: var(--col-grey-normal);
-  border-color: var(--col-primary-dark);
+  border-color: var(--col-grey-dark);
 }
 
 .product .top {
