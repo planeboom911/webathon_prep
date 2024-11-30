@@ -1,0 +1,20 @@
+/* 
+  ====== Section.css ======
+  
+*/
+
+.section {
+  --padding-x: clamp(0.75rem, -0.9rem + 6vw, 4.5rem);
+  --padding-top: clamp(1.25rem, 0.425rem + 3vw, 3.125rem);
+}
+
+.section {
+  padding: 0 var(--padding-x);
+  padding-top: var(--padding-top);
+}
+
+.section .title {
+  font-size: var(--text-3xl);
+  font-weight: var(--weight-semibold);
+  padding-bottom: calc(0.6 * var(--padding-top));
+}

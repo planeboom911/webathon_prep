@@ -13,17 +13,17 @@
 
 .categories .title {
   font-family: var(--font-family-primary);
-  font-size: var(--text-4xl);
+  font-size: var(--text-3xl);
   font-weight: 600;
   padding-bottom: 1rem;
 }
 .categories .block {
-    display: flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 199px;
-  height: 199px;
+  width: 180px;
+  height: 180px;
   border: 1px solid var(--col-mediumGrey);
   border-radius: 10px;
 }

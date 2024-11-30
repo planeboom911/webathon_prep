@@ -77,6 +77,7 @@ main {
   background-color: var(--col-primary);
 }
 
+<<<<<<< HEAD
    /* REPONSIVENESS FOR BANNER */
     @media (max-width:440px) {
     .top .content{
@@ -87,3 +88,9 @@ main {
       right: -30%;
     }
    }
+=======
+.bestSelling .discount {
+  visibility: hidden;
+  pointer-events: none;
+}
+>>>>>>> 0af9e73d0e97f494c78c7f8f3ee70dbfe4cca73a
