@@ -8,6 +8,7 @@
 
 main {
   --padding-normal: 1.6rem 3.5rem;
+  --padding-normal-m:1rem 1rem;
 }
 
 * {
@@ -76,7 +77,20 @@ main {
   background-color: var(--col-primary);
 }
 
+<<<<<<< HEAD
+   /* REPONSIVENESS FOR BANNER */
+    @media (max-width:440px) {
+    .top .content{
+    padding: 10px; /*not been applied why*/
+    }
+    .top.banner img {
+      top: 5%;
+      right: -30%;
+    }
+   }
+=======
 .bestSelling .discount {
   visibility: hidden;
   pointer-events: none;
 }
+>>>>>>> 0af9e73d0e97f494c78c7f8f3ee70dbfe4cca73a

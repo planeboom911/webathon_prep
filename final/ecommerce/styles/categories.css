@@ -20,6 +20,7 @@
 }
 
 .categories .title {
+  color: var(--dark-mode-text);
   font-family: var(--font-family-primary);
   font-size: var(--text-3xl);
   font-weight: 600;
@@ -36,20 +37,34 @@
   border: 1px solid var(--col-grey-dark);
   border-radius: 0.25rem;
   cursor: pointer;
+  transition: var(--transition-normal);
+  border-color: var(--dark-mode-border);
+  background-color:var(--dark-grey-light);
 }
 
-.categories .block:hover {
+  /* ANIMATION IS UPDATED */
+/* .categories .block:hover {
   background-color: var(--col-grey-normal);
+} */
+
+.categories .block:hover { /*UPDATED ANIMATION*/
+  border: none;
+  background-color: var(--col-primary-normal);
+  color: var(--col-white-normal);  
+}
+.categories .block:hover img{
+filter: invert(100%) grayscale(100%);
 }
 
+/* 
 .categories .block.active {
   background-color: var(--col-primary-normal);
   color: var(--col-white-normal);
-}
-
+} */
+/* 
 .categories .block.active img {
   filter: invert(100%) grayscale(100%);
-}
+} */
 
 .categories .icon {
   height: 77.8px;
@@ -58,6 +73,7 @@
 }
 
 .categories .label {
+  color: var(--dark-mode-text);
   font-size: var(--text-lg);
   font-weight: 500;
   font-family: var(--font-family-primary);

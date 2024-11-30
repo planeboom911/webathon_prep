@@ -21,9 +21,10 @@
           <input type="text" placeholder="search products...">
         </div>
         <nav>
-          <a class="icon hide-in-mobile" href="#"><img src="icons/global/favorite.svg" width="34" height="34"></a>
-          <a class="icon hide-in-mobile" href="#"><img src="icons/global/cart.svg" width="34" height="34"></a>
+          <a class="icon hide-in-mobile" href="#"><img src="icons/global/favorite.svg" width="34" height="34" class="dark-mode-svg"></a>
+          <a class="icon hide-in-mobile" href="#"><img src="icons/global/cart.svg" width="34" height="34"  class="dark-mode-svg"></a>
           <a href="#"><button>Log in</button></a>
+          <img src="icons/dark-mode.svg" alt="" id="toggle-dark-mode">
           <a href="#" class="icon hide-in-desktop"><img src="icons/global/menu.svg" width="34" height="34"></a>
         </nav>
       </div>
@@ -57,10 +58,10 @@
       <!-- On sale product list -->
       <section class="section sale hasSlider">
         <div class="title">
-          <span>on sale</span>
+          <span class="dark-mode-text">on sale</span>
           <span class="icons slideControls">
-            <span class="icon left"><img src="icons/global/chevron_left.svg" alt=""></span>
-            <span class="icon right"><img src="icons/global/chevron_right.svg" alt=""></span>
+            <span class="icon left"><img src="icons/global/chevron_left.svg" alt="" class="dark-mode-svg"></span>
+            <span class="icon right"><img src="icons/global/chevron_right.svg" alt=""  class="dark-mode-svg"></span>
           </span>
         </div>
         <div class="slideWrapper">
@@ -531,7 +532,7 @@
         <div class="viewMore">
 
           <!-- Cards -->
-          <div class="block active">
+          <div class="block">
             <img src="icons/categories/gpu-card.svg" alt="" class="icon">
             <p class="label">GPUs</p>
           </div>  
@@ -566,10 +567,10 @@
       <!-- Best Selling product list -->
       <section class="section bestSelling hasSlider">
         <div class="title">
-          <span>Best Selling</span>
+          <span class="dark-mode-text">Best Selling</span>
           <span class="icons slideControls">
-            <span class="icon left"><img src="icons/global/chevron_left.svg" alt=""></span>
-            <span class="icon right"><img src="icons/global/chevron_right.svg" alt=""></span>
+            <span class="icon left"><img src="icons/global/chevron_left.svg" alt=""  class="dark-mode-svg"></span>
+            <span class="icon right"><img src="icons/global/chevron_right.svg" alt=""  class="dark-mode-svg"></span>
           </span>
         </div>
         <div class="slideWrapper">
@@ -698,5 +699,7 @@
 
     </footer>
   </main>
+
+  <script src="scripts/darkmode.js"></script>
 </body>
 </html>
