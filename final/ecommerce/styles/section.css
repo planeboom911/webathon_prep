@@ -6,15 +6,48 @@
 .section {
   --padding-x: clamp(0.75rem, -0.9rem + 6vw, 4.5rem);
   --padding-top: clamp(1.25rem, 0.425rem + 3vw, 3.125rem);
+
+  --icon-size: clamp(1.875rem, 1.325rem + 2vw, 3.125rem);
 }
 
 .section {
-  padding: 0 var(--padding-x);
+  padding-left: var(--padding-x);
   padding-top: var(--padding-top);
+  overflow: hidden;
 }
 
-.section .title {
+.section > .title {
   font-size: var(--text-3xl);
   font-weight: var(--weight-semibold);
+  padding-right: var(--padding-content);
   padding-bottom: calc(0.6 * var(--padding-top));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section .icons {
+  display: flex;
+  column-gap: 10px;
+}
+
+.section .icons .icon {
+  width: var(--icon-size);
+  height: var(--icon-size);
+  border-radius: var(--border-radius-circle);
+}
+
+.section .icons .icon:hover {
+  background-color: var(--col-primary-dark);
+}
+
+.section .icons img {
+  width: var(--icon-size);
+  height: var(--icon-size);
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.section .icons .icon:hover img {
+  filter: invert(100%);
 }
