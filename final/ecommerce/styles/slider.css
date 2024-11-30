@@ -1,0 +1,14 @@
+/* 
+  ====== Slider.css ======
+  Slider styles ...
+*/
+
+.slider {
+  --col-gap: var(--padding-global);
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  column-gap: var(--col-gap);
+}
