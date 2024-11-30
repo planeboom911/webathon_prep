@@ -38,12 +38,16 @@
   cursor: pointer;
 }
 
-.categories .block.active, .categories .block:hover {
+.categories .block.active {
   background-color: var(--col-primary-normal);
   color: var(--col-white-normal);
 }
 
-.categories .block.active img, .categories .block:hover img {
+.categories .block:hover {
+  background-color: var(--col-grey-normal);
+}
+
+.categories .block.active img {
   filter: invert(100%) grayscale(100%);
 }
 

@@ -36,6 +36,13 @@
   background-color: var(--col-grey-light);
   padding: var(--padding);
   border-radius: 0.5rem;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.product:hover {
+  background-color: var(--col-grey-normal);
+  border-color: var(--col-primary-dark);
 }
 
 .product .top {
