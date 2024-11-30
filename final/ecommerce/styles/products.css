@@ -43,7 +43,7 @@
 
   /* ON PRODUCT HOVER */
 .product:hover {
-  background-color: var(--col-grey-normal);
+  /* background-color: var(--col-grey-normal); */
   border-color: var(--col-grey-dark);
 }
 
@@ -79,6 +79,7 @@
   padding-bottom: 0;
   font-size: var(--text-lg);
   font-weight: var(--weight-medium);
+  color: var(--dark-mode-text);
 }
 
 .product .companyName {
@@ -88,6 +89,7 @@
 }
 
 .product .price {
+  color: var(--dark-mode-text);
   margin-top: var(--price-margin-top);
   font-size: var(--text-xl);
   font-weight: var(--weight-medium);
@@ -135,6 +137,7 @@
   align-items: center;
   column-gap: 0.2rem;
   font-size: var(--end-text-size);
+  color: var(--dark-mode-text);
 }
 
 .product .inStock::before {

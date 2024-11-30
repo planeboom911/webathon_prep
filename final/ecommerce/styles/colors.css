@@ -1,7 +1,7 @@
-/* 
+/*
   ====== Colors.css ======
   Contains various color definitions in the variables and classes.
-  
+
   Variables format : --col-<color>-<lightness>
   Where,
     <color> can be
@@ -21,12 +21,14 @@
   Classses :
     .col-<color>-<lightness>
       changes text color to --col-<color>-<lightness>
-    
+
     .bg-<color>-<lightness>
       changes bg color to --col-<color>-<lightness>
 */
 
 html {
+
+
   /* primary */
   --col-primary-normal: #444DFF;
   --col-primary-dark: #050316;
@@ -46,7 +48,7 @@ html {
   --col-grey-normal: #F1F1F1;
   --col-grey-dark: #959595;
   --col-grey-extraDark: #636363;
-  
+
   /* green */
   --col-green-normal: #2AD06C;
 }
@@ -142,3 +144,29 @@ html {
 .bg-green {
  background-color: var(--col-green);
 }
+
+
+
+  /* ====DARK MODE===== */
+  .dark-mode{
+    background-color: #0f0f0f;
+     --dark-mode-svg: invert(100%) grayscale(100%);
+    --dark-mode-text:#ffffff;
+    --col-grey-light:#1B1B1B;
+    --dark-grey-light:#1B1B1B;
+    --col-primary-normal:#6A64E6;
+    --dark-mode-border:#1f1d1da6;
+  }
+  .dark-mode-text{
+    color: var(--dark-mode-text);
+  }
+  .dark-mode-svg{
+    filter: var(--dark-mode-svg);
+  }
+  .block img{
+  filter:var(--dark-mode-svg);
+  }
+  /* .block{
+    border-color: var(--dark-mode-border);
+    background-color:var(--dark-grey-light);
+  } */

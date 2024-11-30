@@ -1,3 +1,6 @@
 1. transition is applied on onSale section files(product.css)
 2. animation  in categories section is updated
 3. active class is removed from categories and hover animation is added
+
+//dark mode
+1. color.css is updated and classes and properties are added to elements

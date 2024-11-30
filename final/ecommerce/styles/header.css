@@ -58,6 +58,8 @@ header {
   font-size: var(--text-3xl);
   font-weight: var(--weight-medium);
   letter-spacing: calc(-0.04 * var(--text-3xl));
+  color: var(--dark-mode-text);
+  
 }
 
 /* search */

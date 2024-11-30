@@ -20,6 +20,7 @@
 }
 
 .categories .title {
+  color: var(--dark-mode-text);
   font-family: var(--font-family-primary);
   font-size: var(--text-3xl);
   font-weight: 600;
@@ -37,6 +38,8 @@
   border-radius: 0.25rem;
   cursor: pointer;
   transition: var(--transition-normal);
+  border-color: var(--dark-mode-border);
+  background-color:var(--dark-grey-light);
 }
 
   /* ANIMATION IS UPDATED */
@@ -70,6 +73,7 @@ filter: invert(100%) grayscale(100%);
 }
 
 .categories .label {
+  color: var(--dark-mode-text);
   font-size: var(--text-lg);
   font-weight: 500;
   font-family: var(--font-family-primary);
