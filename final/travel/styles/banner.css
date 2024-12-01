@@ -16,10 +16,13 @@
   
   --content-width: clamp(19.3125rem, 13.95rem + 19.5vw, 31.5rem);
   --content-padding-botom: clamp(1.5rem, -1.91rem + 12.4vw, 9.25rem);
+
+  --space-gap: max((100% - 1440px)/2, 0px);
 }
 
 .top.banner {
   position: relative;
+  padding: 0 var(--space-gap);
   height: var(--height);
   display: flex;
   flex-direction: column;
@@ -27,6 +30,7 @@
   background-color: var(--col-primary-extraLight);
   color: var(--col-primary-light);
   padding-top: var(--margin-top);
+  overflow: hidden;
 }
 
 .top.banner .title {
@@ -71,7 +75,7 @@
 
 .top.banner > img {
   position: absolute;
-  right: 0;
+  right: calc(var(--space-gap));
   top: 0;
   width: auto;
   height: 100%;

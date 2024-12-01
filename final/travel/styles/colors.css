@@ -144,3 +144,7 @@ html {
 .bg-green {
  background-color: var(--col-green);
 }
+
+html {
+  color: var(--col-primary-dark);
+}

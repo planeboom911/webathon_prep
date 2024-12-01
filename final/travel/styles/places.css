@@ -5,15 +5,24 @@
 
 .place {
   --width: clamp(11.625rem, 8.215rem + 12.4vw, 19.375rem);
-  --height: clamp(18rem, 12.555rem + 19.8vw, 30.375rem);
+  --height: clamp(16.5rem, 11.66rem + 17.6vw, 27.5rem);
 
-  --padding: clamp(0.75rem, 0.64rem + 0.4vw, 1rem);
+  /* --padding: clamp(0.75rem, 0.64rem + 0.4vw, 1rem); */
+  --padding: 0;
   --image-width: clamp(7.5rem, 5.3rem + 8vw, 12.5rem);
+
+  --icon-top: 8px;
+  --icon-right: 8px;
+  --icon-size: clamp(1.25rem, 0.865rem + 1.4vw, 2.125rem);
+  --icon-padding: clamp(0.5rem, 0.39rem + 0.4vw, 0.75rem);
+
+  --padding-left: 6px;
+  --action-height: clamp(1.25rem, 0.15rem + 4vw, 3.75rem);
 
   /* --discount-padding: clamp(0.3125rem, 0.175rem + 0.5vw, 0.625rem) clamp(0.5rem, 0.335rem + 0.6vw, 0.875rem);
   --discount-font-size: clamp(0.75rem, 0.64rem + 0.4vw, 1rem); */
 
-  --title-margin-top: clamp(1.5rem, 0.84rem + 2.4vw, 3rem);
+  --title-margin-top: 10px;
   /* --title-height: clamp(2.25rem, 1.865rem + 1.4vw, 3.125rem);
   --title-line-height: clamp(1.125rem, 1.015rem + 0.4vw, 1.375rem); */
 
@@ -28,22 +37,21 @@
 }
 
 .place {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: var(--width);
   min-width: var(--width);
   height: var(--height);
-  background-color: var(--col-grey-light);
+  /* background-color: var(--col-grey-light); */
   padding: var(--padding);
   border-radius: 0.5rem;
   cursor: pointer;
   border: 1px solid transparent;
+  overflow: hidden;
+  color: var(--col-primary-dark);
 }
 
-.place:hover {
-  background-color: var(--col-grey-normal);
-  border-color: var(--col-primary-dark);
-}
 
 .place .top {
   display: flex;
@@ -54,19 +62,54 @@
 .place .image {
   display: flex;
   justify-content: center;
+  position: relative;
+  border-radius: 0.75rem;
+  overflow: hidden;
 }
 
 .place .image img {
-  width: var(--image-width);
+  width: 100%;
 }
 
-.place .top .discount {
-  padding: var(--discount-padding);
-  color: var(--col-white-normal);
+.actionLabel {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  pointer-events: none;
+  height: var(--action-height);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-medium);
   background-color: var(--col-primary-normal);
-  font-size: var(--discount-font-size);
-  border-radius: 0.5rem;
+  color: var(--col-primary-dark);
+  border-radius: 0;
 }
+
+.actionLabel {
+  transform: translateY(100%);
+  z-index: 3;
+  transition: 200ms ease-in-out all;
+}
+
+.hasHover .place:hover .actionLabel {
+  display: block;
+  pointer-events: all;
+  transform: translateY(0);
+}
+
+.hasHover .place:hover .image::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0,0,0,.4);
+  transition: 200ms ease-in-out all;
+}
+
+/* .place:active .actionLabel {
+  border-radius: 0.5rem;
+  width: max-content;
+  transform: translateY(-30px);
+} */
 
 .place .title {
   height: var(--title-height);
@@ -77,17 +120,31 @@
   padding-bottom: 0;
   font-size: var(--text-lg);
   font-weight: var(--weight-medium);
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  padding-left: var(--padding-left);
 }
 
-.place .companyName {
-  margin-top: var(--companyName-margin-top);
-  font-size: var(--companyName-size);
-  color: var(--col-grey-dark);
+.place .title img {
+  width: calc(0.9 * var(--icon-size));
+  height: calc(0.9 * var(--icon-size));
+}
+
+.place .desc {
+  display: flex;
+  align-items: baseline;
+  padding-left: var(--padding-left);
+}
+
+.place .perPerson {
+  color: var(--col-grey-extraDark);
+  font-weight: var(--weight-medium);
 }
 
 .place .price {
   margin-top: var(--price-margin-top);
-  font-size: var(--text-xl);
+  font-size: var(--text-2xl);
   font-weight: var(--weight-medium);
 }
 
@@ -146,4 +203,32 @@
 
 .place .boughtNumber {
   font-size: var(--end-text-size);
+}
+
+.place .icon {
+  position: absolute;
+  right: var(--icon-right);
+  top: var(--icon-top);
+  width: var(--icon-size);
+  height: var(--icon-size);
+  background-color: var(--col-white-normal);
+  padding: var(--icon-padding);
+  box-sizing: content-box;
+  border-radius: var(--border-radius-circle);
+  z-index: 5;
+}
+
+.viewMore {
+  --padding-viewMore: clamp(0.75rem, 0.53rem + 0.8vw, 1.25rem) clamp(1.25rem, 0.7rem + 2vw, 2.5rem);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.viewMore button {
+  margin-top: 30px;
+  padding: var(--padding-viewMore);
+  border-radius: var(--border-radius-round);
+  border: 2px solid var(--col-primary-normal);
+  background-color: transparent;
 }

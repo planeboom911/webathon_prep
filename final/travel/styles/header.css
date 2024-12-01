@@ -43,10 +43,12 @@ header {
 
 header {
   background-color: var(--col-primary-extraLight);
+  padding: 0 calc((100% - 1440px) / 2);
 }
 
 /* header container */
 .header {
+  max-width: 1440px;
   display: flex;
   justify-content: space-between;
   align-items: center;

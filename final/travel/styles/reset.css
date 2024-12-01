@@ -12,18 +12,15 @@
     and many other things...
 */
 
-* {
-  scroll-behavior: smooth;
-}
-
 *, *::after, *::before {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: inherit;
+  scroll-behavior: smooth;
 }
 
-button, button:focus {
+button {
   outline: none;
   border: none;
   cursor: pointer;
@@ -32,10 +29,6 @@ button, button:focus {
   padding: 0.5rem 1rem;
   background-color: var(--col-grey-dark);
   border-radius: 0.25rem;
-}
-
-input {
-  font-size: inherit;
 }
 
 button:focus-visible {
@@ -57,4 +50,5 @@ input {
   border: 1px solid var(--col-primary-dark);
   padding: 0.5rem;
   border-radius: 0.25rem;
+  font-size: inherit;
 }
