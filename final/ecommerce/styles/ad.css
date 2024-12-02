@@ -1,0 +1,51 @@
+.ad {
+  --height: clamp(12.5rem, 9.75rem + 10vw, 18.75rem);
+  /* --heading-size: clamp(1.25rem, 0.4525rem + 2.9vw, 3.0625rem); */
+  --button-width: clamp(7.5rem, 6.4rem + 4vw, 10rem);
+  /* --padding-right: var(--padding-content); */
+  --button-height: clamp(2.8125rem, 2.4rem + 1.5vw, 3.75rem);
+  --padding-y: clamp(1.875rem, 0.72rem + 4.2vw, 4.5rem);
+}
+
+.ad {
+  /* margin: var(--padding-content); */
+  margin: var(--padding-content) var(--padding-content) 0px var(--padding-content);
+  padding: 0;
+  position: relative;
+  display: flex;
+  background-color: grey;
+  height: var(--height);
+  width: 100%;
+}
+.ad-cover {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+.ad .ad-left {
+  padding-left: var(--padding-x);
+  position: relative;
+  width: 50%;
+  height: 100%;
+}
+.ad-left-content h1 {
+  color: var(--col-white-normal);
+  text-transform: uppercase;
+  font-size: var(--text-2xl);
+}
+.ad button {
+  font-size: var(--text-base);
+  background-color: var(--col-primary-normal);
+  color: var(--col-white-normal);
+  width: var(--button-width);
+  height: var(--button-height);
+}
+.ad-left-content {
+  position: absolute;
+  bottom: var(--padding-y);
+}
+.ad-right {
+  height: 100%;
+  width: 50%;
+  z-index: 10;
+}

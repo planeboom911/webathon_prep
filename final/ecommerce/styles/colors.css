@@ -155,7 +155,9 @@ html {
     --col-grey-light:#1B1B1B;
     --dark-grey-light:#1B1B1B;
     --col-primary-normal:#6A64E6;
-    --dark-mode-border:#1f1d1da6;
+    --dark-mode-border:#1B1B1B;
+    --dark-mode-lightGrey:#373737;
+    --dark-mode-grey:#636363;
   }
   .dark-mode-text{
     color: var(--dark-mode-text);
@@ -166,7 +168,4 @@ html {
   .block img{
   filter:var(--dark-mode-svg);
   }
-  /* .block{
-    border-color: var(--dark-mode-border);
-    background-color:var(--dark-grey-light);
-  } */
+   
